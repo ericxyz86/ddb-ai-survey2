@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DDB Group Philippines Generative AI Survey</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>DDB Group Philippines Generative AI Skills Gap & Agency Survey</h1>
+        <p class="introduction">
+            Welcome to the DDB Group Philippines Generative AI Skills Gap & Agency Survey. In today's rapidly evolving landscape, AI is transforming how we work by amplifying individual impact rather than simply replacing jobs. This survey aims to identify both technical skills gaps and, more importantly, those with high "agency" – the ability to take initiative, work across domains, and leverage AI to accomplish goals without specialized expertise. Your responses will help us develop a training approach that empowers the right individuals to drive AI adoption across our organization.
+        </p>
+        <p><em>Please note: Fields marked with an asterisk (*) are mandatory.</em></p>
+
+        <form name="ai-survey" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="ai-survey" />
+            <p class="hidden">
+                <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+            </p>
+
+            <h2>Section 1: Professional Information</h2>
+
+            <div class="form-group">
+                <label for="name">Name*</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="bu">1. Which Business Unit (BU) do you belong to?*</label>
+                <select id="bu" name="bu" required>
+                    <option value="" disabled selected>Select your BU</option>
+                    <option value="DDB PHL">DDB PHL</option>
+                    <option value="DDB MNL">DDB MNL</option>
+                    <option value="Ripple 8">Ripple 8</option>
+                    <option value="Tribal Worldwide">Tribal Worldwide</option>
+                    <option value="Touch XDA">Touch XDA</option>
+                    <option value="Optimax">Optimax</option>
+                    <option value="Agile Intelligence">Agile Intelligence</option>
+                    <option value="Bent & Buzz">Bent & Buzz</option>
+                    <option value="Other">Other</option>
+                </select>
+                <label for="bu_other" class="other-label">If Other, please specify:</label>
+                <input type="text" id="bu_other" name="bu_other">
+            </div>
+
+            <div class="form-group">
+                <label>2. What is your primary role?*</label>
+                <div><input type="radio" id="role_creative" name="primary_role" value="Creative/Copy Writer" required><label for="role_creative">Creative/Copy Writer</label></div>
+                <div><input type="radio" id="role_data_analyst" name="primary_role" value="Data Analyst"><label for="role_data_analyst">Data Analyst</label></div>
+                <div><input type="radio" id="role_strategist" name="primary_role" value="Strategist/Planner"><label for="role_strategist">Strategist/Planner</label></div>
+                <div><input type="radio" id="role_tech" name="primary_role" value="Tech/Software Developer"><label for="role_tech">Tech/Software Developer</label></div>
+                <div><input type="radio" id="role_media" name="primary_role" value="Media Specialist"><label for="role_media">Media Specialist</label></div>
+                <div><input type="radio" id="role_account" name="primary_role" value="Account Manager"><label for="role_account">Account Manager</label></div>
+                <div><input type="radio" id="role_pr" name="primary_role" value="PR Communications Specialist"><label for="role_pr">PR Communications Specialist</label></div>
+                <div><input type="radio" id="role_executive" name="primary_role" value="Executive Leadership"><label for="role_executive">Executive Leadership</label></div>
+                <div><input type="radio" id="role_other_radio" name="primary_role" value="Other"><label for="role_other_radio">Other</label></div>
+                <label for="role_other_specify" class="other-label">If Other, please specify:</label>
+                <input type="text" id="role_other_specify" name="primary_role_other">
+            </div>
+
+            <div class="form-group">
+                <label>3. How many years of experience do you have:*</label>
+                <label for="exp_current_role">In your current role:</label>
+                <select id="exp_current_role" name="experience_current_role" required>
+                    <option value="" disabled selected>Select years</option>
+                    <option value="0-1">0-1</option>
+                    <option value="1-3">1-3</option>
+                    <option value="3-5">3-5</option>
+                    <option value="5-10">5-10</option>
+                    <option value="10+">10+</option>
+                </select>
+                <label for="exp_ddb">At DDB Group Philippines:</label>
+                <select id="exp_ddb" name="experience_ddb" required>
+                    <option value="" disabled selected>Select years</option>
+                    <option value="0-1">0-1</option>
+                    <option value="1-3">1-3</option>
+                    <option value="3-5">3-5</option>
+                    <option value="5-10">5-10</option>
+                    <option value="10+">10+</option>
+                </select>
+            </div>
+
+            <h2>Section 2: Agency Assessment</h2>
+            
+            <div class="form-group">
+                <label>4. When you identify an inefficiency or problem at work, what is your typical response?*</label>
+                <div><input type="radio" id="inefficiency_wait" name="inefficiency_response" value="Wait for management" required><label for="inefficiency_wait">I wait for management to provide direction on how to address it</label></div>
+                <div><input type="radio" id="inefficiency_existing" name="inefficiency_response" value="Look for existing solutions"><label for="inefficiency_existing">I look for existing solutions within the company or industry</label></div>
+                <div><input type="radio" id="inefficiency_research" name="inefficiency_response" value="Research and recommend"><label for="inefficiency_research">I research various approaches and recommend a solution</label></div>
+                <div><input type="radio" id="inefficiency_experiment" name="inefficiency_response" value="Experiment on my own"><label for="inefficiency_experiment">I immediately start experimenting with potential solutions on my own</label></div>
+                <div><input type="radio" id="inefficiency_team" name="inefficiency_response" value="Assemble a team"><label for="inefficiency_team">I assemble a small team to tackle the problem regardless of official approval</label></div>
+            </div>
+
+            <div class="form-group">
+                <label>5. Have you ever implemented a new tool, process, or workflow without being formally asked to do so?*</label>
+                <div><input type="radio" id="implemented_multiple" name="implemented_new_tool" value="Yes, multiple times, widely adopted" required><label for="implemented_multiple">Yes, multiple times and they were widely adopted</label></div>
+                <div><input type="radio" id="implemented_once_twice" name="implemented_new_tool" value="Yes, once or twice, some success"><label for="implemented_once_twice">Yes, once or twice with some success</label></div>
+                <div><input type="radio" id="implemented_suggested" name="implemented_new_tool" value="Suggested but waited for approval"><label for="implemented_suggested">I've suggested changes but waited for approval to implement</label></div>
+                <div><input type="radio" id="implemented_no" name="implemented_new_tool" value="No, prefer established processes"><label for="implemented_no">No, I prefer to work within established processes</label></div>
+            </div>
+
+            <div class="form-group">
+                <label>6. When faced with a task outside your formal expertise, how do you typically respond?*</label>
+                <div><input type="radio" id="expertise_refer" name="outside_expertise_response" value="Refer to expert" required><label for="expertise_refer">I refer it to someone with the appropriate expertise</label></div>
+                <div><input type="radio" id="expertise_learn_necessary" name="outside_expertise_response" value="Learn only what's necessary"><label for="expertise_learn_necessary">I learn only what's necessary to complete the specific task</label></div>
+                <div><input type="radio" id="expertise_new_skill" name="outside_expertise_response" value="Opportunity to develop new skill"><label for="expertise_new_skill">I take it as an opportunity to develop a new skill area</label></div>
+                <div><input type="radio" id="expertise_dive_in" name="outside_expertise_response" value="Dive in completely"><label for="expertise_dive_in">I dive in completely, teaching myself whatever is needed to excel</label></div>
+            </div>
+
+            <div class="form-group">
+                <label>7. How comfortable are you with working in ambiguous situations without clear guidelines?*</label>
+                <div><input type="radio" id="ambiguous_very_uncomfortable" name="ambiguous_comfort" value="Very uncomfortable" required><label for="ambiguous_very_uncomfortable">Very uncomfortable - I prefer clear instructions</label></div>
+                <div><input type="radio" id="ambiguous_somewhat_uncomfortable" name="ambiguous_comfort" value="Somewhat uncomfortable"><label for="ambiguous_somewhat_uncomfortable">Somewhat uncomfortable - I can manage but prefer structure</label></div>
+                <div><input type="radio" id="ambiguous_comfortable" name="ambiguous_comfort" value="Comfortable"><label for="ambiguous_comfortable">Comfortable - I can navigate uncertainty well</label></div>
+                <div><input type="radio" id="ambiguous_very_comfortable" name="ambiguous_comfort" value="Very comfortable"><label for="ambiguous_very_comfortable">Very comfortable - I thrive in undefined situations</label></div>
+                <div><input type="radio" id="ambiguous_seek_out" name="ambiguous_comfort" value="Actively seek out ambiguous challenges"><label for="ambiguous_seek_out">I actively seek out ambiguous challenges and create structure for others</label></div>
+            </div>
+            
+            <div class="form-group">
+                <label>8. When a project faces unexpected obstacles, how do you typically respond?*</label>
+                <div><input type="radio" id="obstacles_wait" name="obstacles_response" value="Wait for leadership" required><label for="obstacles_wait">Wait for leadership to provide direction</label></div>
+                <div><input type="radio" id="obstacles_suggest" name="obstacles_response" value="Suggest solutions, await approval"><label for="obstacles_suggest">Suggest potential solutions but await approval</label></div>
+                <div><input type="radio" id="obstacles_workarounds" name="obstacles_response" value="Develop workarounds"><label for="obstacles_workarounds">Develop workarounds within my area of responsibility</label></div>
+                <div><input type="radio" id="obstacles_reimagine" name="obstacles_response" value="Completely reimagine approach"><label for="obstacles_reimagine">Completely reimagine the approach regardless of traditional boundaries</label></div>
+                <div><input type="radio" id="obstacles_rally" name="obstacles_response" value="Rally others around new solution"><label for="obstacles_rally">Rally others around a new solution even without formal authority</label></div>
+            </div>
+
+            <h2>Section 3: AI Experimentation & Knowledge</h2>
+
+            <div class="form-group">
+                <label>9. How would you describe your current relationship with AI tools?*</label>
+                <div><input type="radio" id="ai_avoid" name="ai_relationship" value="Avoid them" required><label for="ai_avoid">I avoid using them entirely</label></div>
+                <div><input type="radio" id="ai_tried_complex" name="ai_relationship" value="Tried but complex/unreliable"><label for="ai_tried_complex">I've tried them but found them too complex or unreliable</label></div>
+                <div><input type="radio" id="ai_basic_occasionally" name="ai_relationship" value="Use basic AI occasionally"><label for="ai_basic_occasionally">I use basic AI tools occasionally when shown how</label></div>
+                <div><input type="radio" id="ai_regularly_experiment" name="ai_relationship" value="Regularly experiment"><label for="ai_regularly_experiment">I regularly experiment with AI tools in my personal and work life</label></div>
+                <div><input type="radio" id="ai_actively_seek" name="ai_relationship" value="Actively seek out new AI tools"><label for="ai_actively_seek">I actively seek out new AI tools and ways to integrate them into workflows</label></div>
+            </div>
+
+            <div class="form-group">
+                <label>10. Have you used AI to accomplish something outside your formal job description?*</label>
+                <div><input type="radio" id="ai_outside_no" name="ai_outside_job" value="No, only within role" required><label for="ai_outside_no">No, I use AI only for tasks within my role</label></div>
+                <div><input type="radio" id="ai_outside_experimented" name="ai_outside_job" value="Experimented once or twice"><label for="ai_outside_experimented">I've experimented once or twice with tasks outside my role</label></div>
+                <div><input type="radio" id="ai_outside_regularly" name="ai_outside_job" value="Yes, regularly use AI outside department"><label for="ai_outside_regularly">Yes, I regularly use AI to handle tasks traditionally outside my department</label></div>
+            </div>
+
+            <div class="form-group">
+                <label>11. Which statement best reflects your approach to understanding how AI tools work?*</label>
+                <div><input type="radio" id="ai_understanding_not_concerned" name="ai_understanding" value="Not concerned with how they work" required><label for="ai_understanding_not_concerned">I'm not concerned with how they work, only results</label></div>
+                <div><input type="radio" id="ai_understanding_basic" name="ai_understanding" value="Basic understanding of principles"><label for="ai_understanding_basic">I have a basic understanding of the underlying principles</label></div>
+                <div><input type="radio" id="ai_understanding_deep_dive" name="ai_understanding" value="Deep dive into mechanics"><label for="ai_understanding_deep_dive">I deep dive into the mechanics and architecture</label></div>
+                <div><input type="radio" id="ai_understanding_build_similar" name="ai_understanding" value="Could explain or build similar tools"><label for="ai_understanding_build_similar">I could explain or even build similar (simpler) tools</label></div>
+                <div><input type="radio" id="ai_understanding_none" name="ai_understanding" value="None of the above"><label for="ai_understanding_none">None of the above</label></div>
+            </div>
+
+            <div class="form-group">
+                <label>12. How often do you currently use AI tools in your work?*</label>
+                <div><input type="radio" id="ai_usage_never" name="ai_usage_frequency" value="Never" required><label for="ai_usage_never">Never</label></div>
+                <div><input type="radio" id="ai_usage_rarely" name="ai_usage_frequency" value="Rarely (once a month or less)"><label for="ai_usage_rarely">Rarely (once a month or less)</label></div>
+                <div><input type="radio" id="ai_usage_occasionally" name="ai_usage_frequency" value="Occasionally (a few times a month)"><label for="ai_usage_occasionally">Occasionally (a few times a month)</label></div>
+                <div><input type="radio" id="ai_usage_regularly" name="ai_usage_frequency" value="Regularly (weekly)"><label for="ai_usage_regularly">Regularly (weekly)</label></div>
+                <div><input type="radio" id="ai_usage_frequently" name="ai_usage_frequency" value="Frequently (daily, for multiple purposes)"><label for="ai_usage_frequently">Frequently (daily, for multiple purposes)</label></div>
+            </div>
+
+            <div class="form-group">
+                <label>13. Which categories of AI tools have you experimented with?* (Select all that apply)</label>
+                <fieldset>
+                    <legend>Text generation/editing</legend>
+                    <div><input type="checkbox" id="text_chatgpt" name="ai_tools_text_generation[]" value="ChatGPT"><label for="text_chatgpt">ChatGPT</label></div>
+                    <div><input type="checkbox" id="text_claude" name="ai_tools_text_generation[]" value="Claude"><label for="text_claude">Claude</label></div>
+                    <div><input type="checkbox" id="text_gemini" name="ai_tools_text_generation[]" value="Gemini"><label for="text_gemini">Gemini</label></div>
+                    <div><input type="checkbox" id="text_grok" name="ai_tools_text_generation[]" value="Grok"><label for="text_grok">Grok</label></div>
+                    <div><input type="checkbox" id="text_deepseek" name="ai_tools_text_generation[]" value="DeepSeek"><label for="text_deepseek">DeepSeek</label></div>
+                    <div><input type="checkbox" id="text_other_checkbox" name="ai_tools_text_generation[]" value="Other_Text_Gen"><label for="text_other_checkbox">Other</label></div>
+                    <input type="text" id="text_other_specify" name="ai_tools_text_generation_other" placeholder="Specify other text generation tools">
+                </fieldset>
+                <fieldset>
+                    <legend>Image generation/editing</legend>
+                    <div><input type="checkbox" id="image_midjourney" name="ai_tools_image_generation[]" value="Midjourney"><label for="image_midjourney">Midjourney</label></div>
+                    <div><input type="checkbox" id="image_firefly" name="ai_tools_image_generation[]" value="Adobe Firefly"><label for="image_firefly">Adobe Firefly</label></div>
+                    <div><input type="checkbox" id="image_dalle" name="ai_tools_image_generation[]" value="DALL-E"><label for="image_dalle">DALL-E</label></div>
+                    <div><input type="checkbox" id="image_stable_diffusion" name="ai_tools_image_generation[]" value="Stable Diffusion"><label for="image_stable_diffusion">Stable Diffusion</label></div>
+                    <div><input type="checkbox" id="image_leonardo" name="ai_tools_image_generation[]" value="Leonardo.Ai"><label for="image_leonardo">Leonardo.Ai</label></div>
+                    <div><input type="checkbox" id="image_other_checkbox" name="ai_tools_image_generation[]" value="Other_Image_Gen"><label for="image_other_checkbox">Other</label></div>
+                    <input type="text" id="image_other_specify" name="ai_tools_image_generation_other" placeholder="Specify other image generation tools">
+                </fieldset>
+                 <fieldset>
+                    <legend>Video generation/editing</legend>
+                    <div><input type="checkbox" id="video_sora" name="ai_tools_video_generation[]" value="Sora"><label for="video_sora">Sora</label></div>
+                    <div><input type="checkbox" id="video_runway" name="ai_tools_video_generation[]" value="RunwayML"><label for="video_runway">RunwayML</label></div>
+                    <div><input type="checkbox" id="video_synthesia" name="ai_tools_video_generation[]" value="Synthesia"><label for="video_synthesia">Synthesia</label></div>
+                    <div><input type="checkbox" id="video_invideo" name="ai_tools_video_generation[]" value="InVideo AI"><label for="video_invideo">InVideo AI</label></div>
+                    <div><input type="checkbox" id="video_other_checkbox" name="ai_tools_video_generation[]" value="Other_Video_Gen"><label for="video_other_checkbox">Other</label></div>
+                    <input type="text" id="video_other_specify" name="ai_tools_video_generation_other" placeholder="Specify other video generation tools">
+                </fieldset>
+                <fieldset>
+                    <legend>Audio generation/editing (e.g. voice cloning, music generation)</legend>
+                    <div><input type="checkbox" id="audio_elevenlabs" name="ai_tools_audio_generation[]" value="ElevenLabs"><label for="audio_elevenlabs">ElevenLabs</label></div>
+                    <div><input type="checkbox" id="audio_playht" name="ai_tools_audio_generation[]" value="PlayHT"><label for="audio_playht">PlayHT</label></div>
+                    <div><input type="checkbox" id="audio_suno" name="ai_tools_audio_generation[]" value="Suno AI"><label for="audio_suno">Suno AI</label></div>
+                    <div><input type="checkbox" id="audio_other_checkbox" name="ai_tools_audio_generation[]" value="Other_Audio_Gen"><label for="audio_other_checkbox">Other</label></div>
+                    <input type="text" id="audio_other_specify" name="ai_tools_audio_generation_other" placeholder="Specify other audio generation tools">
+                </fieldset>
+                <fieldset>
+                    <legend>Data analysis/visualization</legend>
+                    <div><input type="checkbox" id="data_chatgpt_analysis" name="ai_tools_data_analysis[]" value="ChatGPT (Data Analysis)"><label for="data_chatgpt_analysis">ChatGPT (Data Analysis)</label></div>
+                    <div><input type="checkbox" id="data_tableau" name="ai_tools_data_analysis[]" value="Tableau AI"><label for="data_tableau">Tableau AI</label></div>
+                    <div><input type="checkbox" id="data_powerbi" name="ai_tools_data_analysis[]" value="PowerBI AI"><label for="data_powerbi">PowerBI AI</label></div>
+                    <div><input type="checkbox" id="data_other_checkbox" name="ai_tools_data_analysis[]" value="Other_Data_Analysis"><label for="data_other_checkbox">Other</label></div>
+                    <input type="text" id="data_other_specify" name="ai_tools_data_analysis_other" placeholder="Specify other data analysis tools">
+                </fieldset>
+                 <fieldset>
+                    <legend>Coding/automation</legend>
+                    <div><input type="checkbox" id="coding_cursor" name="ai_tools_coding[]" value="Cursor"><label for="coding_cursor">Cursor</label></div>
+                    <div><input type="checkbox" id="coding_windsurf" name="ai_tools_coding[]" value="Windsurf"><label for="coding_windsurf">Windsurf</label></div>
+                    <div><input type="checkbox" id="coding_github_copilot" name="ai_tools_coding[]" value="GitHub Copilot"><label for="coding_github_copilot">GitHub Copilot</label></div>
+                    <div><input type="checkbox" id="coding_zapier" name="ai_tools_coding[]" value="Zapier"><label for="coding_zapier">Zapier</label></div>
+                    <div><input type="checkbox" id="coding_n8n" name="ai_tools_coding[]" value="n8n"><label for="coding_n8n">n8n</label></div>
+                    <div><input type="checkbox" id="coding_other_checkbox" name="ai_tools_coding[]" value="Other_Coding"><label for="coding_other_checkbox">Other</label></div>
+                    <input type="text" id="coding_other_specify" name="ai_tools_coding_other" placeholder="Specify other coding/automation tools">
+                </fieldset>
+            </div>
+
+            <div class="form-group" id="q14_container">
+                <label>14. For the AI tools you have used, please indicate your proficiency level:*</label>
+                <div id="q14_dynamic_proficiencies">
+                    <p><em>Please select tools in Question 13 to see proficiency options.</em></p>
+                </div>
+            </div>
+
+            <h2>Section 4: Cross-Functional Impact Potential</h2>
+
+            <div class="form-group">
+                <label>15. If given access to any AI tool, which activities outside your current role would you be most interested in tackling?* (Select up to 3)</label>
+                <div><input type="checkbox" id="cross_visual" name="cross_functional_interest[]" value="Creating visual assets"><label for="cross_visual">Creating visual assets (without design expertise)</label></div>
+                <div><input type="checkbox" id="cross_data_analysis" name="cross_functional_interest[]" value="Analyzing complex data sets"><label for="cross_data_analysis">Analyzing complex data sets (without data science background)</label></div>
+                <div><input type="checkbox" id="cross_copywriting" name="cross_functional_interest[]" value="Drafting compelling copy for different platforms"><label for="cross_copywriting">Drafting compelling copy for different platforms</label></div>
+                <div><input type="checkbox" id="cross_code_prototypes" name="cross_functional_interest[]" value="Building simple code prototypes or automating tasks"><label for="cross_code_prototypes">Building simple code prototypes or automating tasks</label></div>
+                <div><input type="checkbox" id="cross_market_research" name="cross_functional_interest[]" value="Conducting in-depth market research and trend analysis"><label for="cross_market_research">Conducting in-depth market research and trend analysis</label></div>
+                <div><input type="checkbox" id="cross_video_storyboards" name="cross_functional_interest[]" value="Developing video storyboards or simple animations"><label for="cross_video_storyboards">Developing video storyboards or simple animations</label></div>
+                <div><input type="checkbox" id="cross_client_strategy" name="cross_functional_interest[]" value="Contributing to client strategy development"><label for="cross_client_strategy">Contributing to client strategy development</label></div>
+            </div>
+
+            <div class="form-group">
+                <label>16. How do you currently collaborate with colleagues from other departments on projects?*</label>
+                <div><input type="radio" id="collaborate_rarely" name="collaboration_style" value="Rarely, work mostly within my team" required><label for="collaborate_rarely">Rarely, I work mostly within my team</label></div>
+                <div><input type="radio" id="collaborate_formal_channels" name="collaboration_style" value="Through formal channels and scheduled meetings"><label for="collaborate_formal_channels">Through formal channels and scheduled meetings</label></div>
+                <div><input type="radio" id="collaborate_informally" name="collaboration_style" value="Informally, as needed for specific tasks"><label for="collaborate_informally">Informally, as needed for specific tasks</label></div>
+                <div><input type="radio" id="collaborate_proactively" name="collaboration_style" value="Proactively seek cross-departmental input"><label for="collaborate_proactively">I proactively seek out cross-departmental input and collaboration</label></div>
+                <div><input type="radio" id="collaborate_lead_cross_functional" name="collaboration_style" value="Regularly lead or initiate cross-functional projects"><label for="collaborate_lead_cross_functional">I regularly lead or initiate cross-functional projects</label></div>
+            </div>
+
+            <div class="form-group">
+                <label for="ai_project_idea">17. Imagine an AI tool that perfectly understands DDB's work and clients. Describe one specific, new cross-functional project you would initiate with this tool that isn't currently feasible.*</label>
+                <textarea id="ai_project_idea" name="ai_cross_functional_project_idea" rows="4" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="eliminate_barriers_project">18. If you could eliminate technical barriers, what's one project you would immediately tackle with AI tools that would create significant impact for your team or clients?*</label>
+                <textarea id="eliminate_barriers_project" name="eliminate_barriers_project_idea" rows="4" required></textarea>
+            </div>
+
+            <h2>Section 5: Learning & Implementation Approach</h2>
+
+            <div class="form-group">
+                <label>19. When learning new technologies, which statement best describes your approach?*</label>
+                <div><input type="radio" id="learning_comprehensive_training" name="learning_approach" value="Comprehensive training before practical application" required><label for="learning_comprehensive_training">I prefer comprehensive training before attempting practical application</label></div>
+                <div><input type="radio" id="learning_guided_tutorials" name="learning_approach" value="Guided, step-by-step tutorials"><label for="learning_guided_tutorials">I learn best through guided, step-by-step tutorials with clear outcomes</label></div>
+                <div><input type="radio" id="learning_hands_on" name="learning_approach" value="Hands-on experimentation and learning by doing"><label for="learning_hands_on">I prefer hands-on experimentation and learning by doing, figuring things out as I go</label></div>
+                <div><input type="radio" id="learning_real_world_projects" name="learning_approach" value="Applying to real-world projects immediately"><label for="learning_real_world_projects">I learn best by applying new technologies to real-world projects immediately</label></div>
+                <div><input type="radio" id="learning_observe_others" name="learning_approach" value="Observing others and asking questions"><label for="learning_observe_others">I prefer to observe others and ask questions before trying myself</label></div>
+            </div>
+
+            <div class="form-group">
+                <label>20. How would you prefer to learn about and implement AI tools at DDB?* (Select up to 2)</label>
+                <div><input type="checkbox" id="learn_structured_workshops" name="preferred_learning_method[]" value="Structured workshops and training sessions"><label for="learn_structured_workshops">Structured workshops and training sessions</label></div>
+                <div><input type="checkbox" id="learn_online_courses" name="preferred_learning_method[]" value="Self-paced online courses and resources"><label for="learn_online_courses">Self-paced online courses and resources</label></div>
+                <div><input type="checkbox" id="learn_mentorship" name="preferred_learning_method[]" value="Mentorship from experienced AI users"><label for="learn_mentorship">Mentorship from experienced AI users</label></div>
+                <div><input type="checkbox" id="learn_project_based" name="preferred_learning_method[]" value="Project-based learning on real DDB challenges"><label for="learn_project_based">Project-based learning on real DDB challenges</label></div>
+                <div><input type="checkbox" id="learn_community_practice" name="preferred_learning_method[]" value="Informal community of practice/peer learning"><label for="learn_community_practice">Informal community of practice/peer learning</label></div>
+            </div>
+
+            <div class="form-group">
+                <label>21. What level of support would you need to effectively integrate AI into your workflow?*</label>
+                <div><input type="radio" id="support_minimal" name="support_needed" value="Minimal, I can figure it out myself" required><label for="support_minimal">Minimal, I can figure it out myself with access to tools</label></div>
+                <div><input type="radio" id="support_occasional" name="support_needed" value="Occasional guidance and best practices"><label for="support_occasional">Occasional guidance, access to best practices and use cases</label></div>
+                <div><input type="radio" id="support_regular" name="support_needed" value="Regular check-ins and troubleshooting help"><label for="support_regular">Regular check-ins and troubleshooting help from experts</label></div>
+                <div><input type="radio" id="support_dedicated" name="support_needed" value="Dedicated support and structured integration plan"><label for="support_dedicated">Dedicated support and a structured integration plan for my role/team</label></div>
+            </div>
+
+            <div class="form-group">
+                <label>22. What is your preferred environment for experimenting with new, potentially disruptive technologies?*</label>
+                <div><input type="radio" id="experiment_solo" name="experiment_environment" value="Solo, self-directed exploration" required><label for="experiment_solo">Solo, self-directed exploration</label></div>
+                <div><input type="radio" id="experiment_small_group" name="experiment_environment" value="Small, informal group of peers"><label for="experiment_small_group">Small, informal group of peers</label></div>
+                <div><input type="radio" id="experiment_structured_sandbox" name="experiment_environment" value="Structured sandbox environment with set goals"><label for="experiment_structured_sandbox">Structured 'sandbox' environment with set goals</label></div>
+                <div><input type="radio" id="experiment_expert_access" name="experiment_environment" value="Free exploration with access to experts when needed"><label for="experiment_expert_access">Free exploration with access to experts when needed</label></div>
+                <div><input type="radio" id="experiment_cross_functional_teams" name="experiment_environment" value="Cross-functional teams tackling real business problems"><label for="experiment_cross_functional_teams">Cross-functional teams tackling real business problems</label></div>
+                <div><input type="radio" id="experiment_self_directed_accountability" name="experiment_environment" value="Self-directed learning with accountability partnerships"><label for="experiment_self_directed_accountability">Self-directed learning with accountability partnerships</label></div>
+            </div>
+
+            <h2>Section 6: AI Champion Potential</h2>
+
+            <div class="form-group">
+                <label>23. Do colleagues from other departments or disciplines come to you for help with problems?*</label>
+                <div><input type="radio" id="colleagues_help_never" name="colleagues_help" value="Never" required><label for="colleagues_help_never">Never</label></div>
+                <div><input type="radio" id="colleagues_help_rarely" name="colleagues_help" value="Rarely"><label for="colleagues_help_rarely">Rarely</label></div>
+                <div><input type="radio" id="colleagues_help_sometimes" name="colleagues_help" value="Sometimes"><label for="colleagues_help_sometimes">Sometimes</label></div>
+                <div><input type="radio" id="colleagues_help_frequently" name="colleagues_help" value="Frequently"><label for="colleagues_help_frequently">Frequently</label></div>
+                <div><input type="radio" id="colleagues_help_go_to" name="colleagues_help" value="I'm known as a go-to problem solver"><label for="colleagues_help_go_to">I'm known as a go-to problem solver across teams</label></div>
+            </div>
+
+            <div class="form-group">
+                <label>24. How do you typically respond when colleagues face challenges with new technologies?*</label>
+                <div><input type="radio" id="tech_challenge_suggest_it" name="tech_challenge_response" value="Suggest IT/experts" required><label for="tech_challenge_suggest_it">I suggest they reach out to IT or relevant experts</label></div>
+                <div><input type="radio" id="tech_challenge_basic_guidance" name="tech_challenge_response" value="Offer basic guidance"><label for="tech_challenge_basic_guidance">I offer basic guidance within my knowledge area</label></div>
+                <div><input type="radio" id="tech_challenge_actively_work" name="tech_challenge_response" value="Actively work with them"><label for="tech_challenge_actively_work">I actively work with them to solve their problem</label></div>
+                <div><input type="radio" id="tech_challenge_create_resources" name="tech_challenge_response" value="Create documentation/resources"><label for="tech_challenge_create_resources">I create documentation or resources to help them and others</label></div>
+                <div><input type="radio" id="tech_challenge_organize_training" name="tech_challenge_response" value="Organize informal training"><label for="tech_challenge_organize_training">I organize informal training sessions to address common issues</label></div>
+            </div>
+
+            <div class="form-group">
+                <label>25. Are you interested in becoming an AI Champion who helps drive AI adoption across DDB?*</label>
+                <div><input type="radio" id="ai_champion_no" name="ai_champion_interest" value="No, prefer to focus on my role" required><label for="ai_champion_no">No, I prefer to focus on my specific role</label></div>
+                <div><input type="radio" id="ai_champion_open_occasionally" name="ai_champion_interest" value="Open to helping occasionally"><label for="ai_champion_open_occasionally">I'm open to helping occasionally if asked</label></div>
+                <div><input type="radio" id="ai_champion_yes_need_support" name="ai_champion_interest" value="Yes, interested but need support"><label for="ai_champion_yes_need_support">Yes, I'm interested but would need significant support</label></div>
+                <div><input type="radio" id="ai_champion_yes_ready" name="ai_champion_interest" value="Yes, very interested and ready"><label for="ai_champion_yes_ready">Yes, I'm very interested and ready to take initiative</label></div>
+                <div><input type="radio" id="ai_champion_already_informally" name="ai_champion_interest" value="Already informally serving"><label for="ai_champion_already_informally">I'm already informally serving in this capacity</label></div>
+            </div>
+
+            <div class="form-group">
+                <label>26. If you were to lead AI implementation in your team, which approach would you take?*</label>
+                <div><input type="radio" id="lead_ai_standardized_training" name="lead_ai_approach" value="Standardized training" required><label for="lead_ai_standardized_training">Start with standardized training for everyone</label></div>
+                <div><input type="radio" id="lead_ai_high_impact_project" name="lead_ai_approach" value="High-impact project demonstration"><label for="lead_ai_high_impact_project">Identify one high-impact project and demonstrate success</label></div>
+                <div><input type="radio" id="lead_ai_resource_library" name="lead_ai_approach" value="Resource library and support forum"><label for="lead_ai_resource_library">Create a resource library and support forum for self-learners</label></div>
+                <div><input type="radio" id="lead_ai_experimental_group" name="lead_ai_approach" value="Form small experimental group"><label for="lead_ai_experimental_group">Form a small experimental group to test various applications</label></div>
+                <div><input type="radio" id="lead_ai_other_radio" name="lead_ai_approach" value="Other"><label for="lead_ai_other_radio">Other</label></div>
+                <label for="lead_ai_other_specify" class="other-label">If Other, please specify:</label>
+                <input type="text" id="lead_ai_other_specify" name="lead_ai_approach_other">
+            </div>
+
+            <h2>Section 7: Business Impact & Implementation</h2>
+
+            <div class="form-group">
+                <label>27. Which current business challenges at DDB do you believe could be addressed with AI?* (Select all that apply)</label>
+                <div><input type="checkbox" id="challenge_admin_tasks" name="business_challenges_ai[]" value="Reducing administrative tasks"><label for="challenge_admin_tasks">Reducing time spent on administrative tasks</label></div>
+                <div><input type="checkbox" id="challenge_creative_ideation" name="business_challenges_ai[]" value="Accelerating creative ideation"><label for="challenge_creative_ideation">Accelerating creative ideation and production</label></div>
+                <div><input type="checkbox" id="challenge_data_analysis" name="business_challenges_ai[]" value="Improving data analysis"><label for="challenge_data_analysis">Improving data analysis for strategic insights</label></div>
+                <div><input type="checkbox" id="challenge_client_presentations" name="business_challenges_ai[]" value="Enhancing client presentations"><label for="challenge_client_presentations">Enhancing client presentations and pitches</label></div>
+                <div><input type="checkbox" id="challenge_personalized_comms" name="business_challenges_ai[]" value="Personalized client communications"><label for="challenge_personalized_comms">Creating more personalized client communications</label></div>
+                <div><input type="checkbox" id="challenge_resource_allocation" name="business_challenges_ai[]" value="Optimizing resource allocation"><label for="challenge_resource_allocation">Optimizing resource allocation across projects</label></div>
+                <div><input type="checkbox" id="challenge_client_feedback" name="business_challenges_ai[]" value="Streamlining client feedback"><label for="challenge_client_feedback">Streamlining client feedback and revision cycles</label></div>
+                <div><input type="checkbox" id="challenge_other_checkbox" name="business_challenges_ai[]" value="Other_Business_Challenge"><label for="challenge_other_checkbox">Other</label></div>
+                <input type="text" id="challenge_other_specify" name="business_challenges_ai_other" placeholder="Specify other business challenges">
+            </div>
+
+            <div class="form-group">
+                <label for="ai_metrics">28. What specific metrics or outcomes would indicate successful AI integration in your role?*</label>
+                <textarea id="ai_metrics" name="ai_success_metrics" rows="4" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>29. What concerns do you have about implementing AI in your workflow?* (Select all that apply)</label>
+                <div><input type="checkbox" id="concern_quality" name="ai_concerns[]" value="Quality/accuracy of AI outputs"><label for="concern_quality">Quality/accuracy of AI outputs</label></div>
+                <div><input type="checkbox" id="concern_job_displacement" name="ai_concerns[]" value="Potential job displacement"><label for="concern_job_displacement">Potential job displacement</label></div>
+                <div><input type="checkbox" id="concern_lack_creativity" name="ai_concerns[]" value="Lack of human creativity or insight"><label for="concern_lack_creativity">Lack of human creativity or insight</label></div>
+                <div><input type="checkbox" id="concern_ethical" name="ai_concerns[]" value="Ethical concerns about AI use"><label for="concern_ethical">Ethical concerns about AI use</label></div>
+                <div><input type="checkbox" id="concern_client_perceptions" name="ai_concerns[]" value="Client perceptions of AI-assisted work"><label for="concern_client_perceptions">Client perceptions of AI-assisted work</label></div>
+                <div><input type="checkbox" id="concern_overreliance" name="ai_concerns[]" value="Overreliance on technology"><label for="concern_overreliance">Overreliance on technology</label></div>
+                <div><input type="checkbox" id="concern_security_privacy" name="ai_concerns[]" value="Security/privacy considerations"><label for="concern_security_privacy">Security/privacy considerations</label></div>
+                <div><input type="checkbox" id="concern_other_checkbox" name="ai_concerns[]" value="Other_AI_Concern"><label for="concern_other_checkbox">Other</label></div>
+                <input type="text" id="concern_other_specify" name="ai_concerns_other" placeholder="Specify other AI concerns">
+            </div>
+
+            <h2>Section 8: Commitment & Initiative</h2>
+
+            <div class="form-group">
+                <label>30. Are you willing to commit to an experimental period where you actively look for ways to apply AI, even if it means stepping outside your formal role?*</label>
+                <div><input type="radio" id="commit_experimental_yes_excited" name="commit_experimental_period" value="Yes, excited" required><label for="commit_experimental_yes_excited">Yes, I'm excited about this opportunity</label></div>
+                <div><input type="radio" id="commit_experimental_yes_guidance" name="commit_experimental_period" value="Yes, but need guidance"><label for="commit_experimental_yes_guidance">Yes, but I would need some guidance</label></div>
+                <div><input type="radio" id="commit_experimental_maybe" name="commit_experimental_period" value="Maybe, depending on workload"><label for="commit_experimental_maybe">Maybe, depending on workload and expectations</label></div>
+                <div><input type="radio" id="commit_experimental_no" name="commit_experimental_period" value="No, prefer current responsibilities"><label for="commit_experimental_no">No, I prefer to stay focused on my current responsibilities</label></div>
+            </div>
+
+            <div class="form-group">
+                <label>31. Would you be willing to document your AI experiments and share learnings with colleagues, regardless of success or failure?*</label>
+                <div><input type="radio" id="share_learnings_yes_absolutely" name="share_learnings" value="Yes, absolutely" required><label for="share_learnings_yes_absolutely">Yes, absolutely</label></div>
+                <div><input type="radio" id="share_learnings_yes_easy_share" name="share_learnings" value="Yes, if easy to share"><label for="share_learnings_yes_easy_share">Yes, if it's made easy to share</label></div>
+                <div><input type="radio" id="share_learnings_maybe_successful" name="share_learnings" value="Maybe, only for successful implementations"><label for="share_learnings_maybe_successful">Maybe, but only for successful implementations</label></div>
+                <div><input type="radio" id="share_learnings_no_independent" name="share_learnings" value="No, prefer to work independently"><label for="share_learnings_no_independent">No, I prefer to work independently</label></div>
+            </div>
+
+            <div class="form-group">
+                <label for="personal_ai_goal">32. What personal goal would you set for your own AI implementation in the next 3 months?*</label>
+                <textarea id="personal_ai_goal" name="personal_ai_goal_3_months" rows="4" required></textarea>
+            </div>
+
+            <h2>Section 9: Feedback & Ideas</h2>
+
+            <div class="form-group">
+                <label for="ai_change_structure">33. How do you envision AI changing the structure of teams and roles at agencies like DDB?</label>
+                <textarea id="ai_change_structure" name="ai_change_structure_feedback" rows="4"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="additional_suggestions">34. Do you have any additional suggestions for how DDB Group Philippines should approach AI integration?</label>
+                <textarea id="additional_suggestions" name="additional_suggestions_feedback" rows="4"></textarea>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="submit-btn">Submit Survey</button>
+            </div>
+        </form>
+
+        <p class="thank-you-note">
+            Thank you for completing this survey. Your responses will help us identify individuals with high agency who can lead our AI transformation, as well as those who would benefit from specific training approaches. We're moving beyond traditional skills training toward empowering people who can leverage AI to work across traditional boundaries and drive business impact.
+        </p>
+    </div>
+
+    <script>
+        // Simple script to handle "Other" text fields visibility for radio buttons and select
+        const radioGroups = [
+            { radioName: 'primary_role', otherRadioValue: 'Other', otherSpecifyId: 'role_other_specify' },
+            { radioName: 'lead_ai_approach', otherRadioValue: 'Other', otherSpecifyId: 'lead_ai_other_specify' },
+            { radioName: 'bu', otherRadioValue: 'Other', otherSpecifyId: 'bu_other' }
+        ];
+
+        radioGroups.forEach(group => {
+            document.querySelectorAll(`input[name="${group.radioName}"]`).forEach(radio => {
+                radio.addEventListener('change', function() {
+                    const otherSpecifyField = document.getElementById(group.otherSpecifyId);
+                    if (this.value === group.otherRadioValue && this.checked) {
+                        otherSpecifyField.style.display = 'inline-block';
+                        otherSpecifyField.required = true;
+                    } else {
+                        // Check if any other radio in the group is 'Other' and checked
+                        let isOtherChecked = false;
+                        document.querySelectorAll(`input[name="${group.radioName}"]`).forEach(r => {
+                            if (r.value === group.otherRadioValue && r.checked) {
+                                isOtherChecked = true;
+                            }
+                        });
+                        if (!isOtherChecked) {
+                           otherSpecifyField.style.display = 'none';
+                           otherSpecifyField.required = false;
+                           otherSpecifyField.value = ''; // Clear value when hidden
+                        }
+                    }
+                });
+            });
+            // Initial check
+            const otherSpecifyField = document.getElementById(group.otherSpecifyId);
+            const checkedRadio = document.querySelector(`input[name="${group.radioName}"]:checked`);
+            if (checkedRadio && checkedRadio.value === group.otherRadioValue) {
+                otherSpecifyField.style.display = 'inline-block';
+                otherSpecifyField.required = true;
+            } else {
+                otherSpecifyField.style.display = 'none';
+                otherSpecifyField.required = false;
+            }
+        });
+
+        // Script to handle "Other" text fields visibility for select dropdowns
+        const selectGroups = [
+            { 
+                selectId: 'bu', 
+                otherValue: 'Other', 
+                otherSpecifyId: 'bu_other',
+                otherLabelSelector: 'label[for="bu_other"]' 
+            }
+        ];
+
+        selectGroups.forEach(group => {
+            const selectElement = document.getElementById(group.selectId);
+            const otherSpecifyField = document.getElementById(group.otherSpecifyId);
+            const otherLabel = document.querySelector(group.otherLabelSelector);
+
+            function toggleOtherField() {
+                if (selectElement.value === group.otherValue) {
+                    otherLabel.style.display = 'block';
+                    otherSpecifyField.style.display = 'block';
+                    otherSpecifyField.required = true;
+                } else {
+                    otherLabel.style.display = 'none';
+                    otherSpecifyField.style.display = 'none';
+                    otherSpecifyField.required = false;
+                    otherSpecifyField.value = ''; // Clear value when hidden
+                }
+            }
+
+
+            // Add event listener
+            selectElement.addEventListener('change', toggleOtherField);
+            
+            // Initial check on page load
+            toggleOtherField();
+        });
+
+        // Script to handle "Other" text fields visibility for checkbox groups
+        const checkboxGroups = [
+            { checkboxName: 'ai_tools_text_generation[]', otherCheckboxValue: 'Other_Text_Gen', otherSpecifyId: 'text_other_specify' },
+            { checkboxName: 'ai_tools_image_generation[]', otherCheckboxValue: 'Other_Image_Gen', otherSpecifyId: 'image_other_specify' },
+            { checkboxName: 'ai_tools_video_generation[]', otherCheckboxValue: 'Other_Video_Gen', otherSpecifyId: 'video_other_specify' },
+            { checkboxName: 'ai_tools_audio_generation[]', otherCheckboxValue: 'Other_Audio_Gen', otherSpecifyId: 'audio_other_specify' },
+            { checkboxName: 'ai_tools_data_analysis[]', otherCheckboxValue: 'Other_Data_Analysis', otherSpecifyId: 'data_other_specify' },
+            { checkboxName: 'ai_tools_coding[]', otherCheckboxValue: 'Other_Coding', otherSpecifyId: 'coding_other_specify' },
+            { checkboxName: 'business_challenges_ai[]', otherCheckboxValue: 'Other_Business_Challenge', otherSpecifyId: 'challenge_other_specify' },
+            { checkboxName: 'ai_concerns[]', otherCheckboxValue: 'Other_AI_Concern', otherSpecifyId: 'concern_other_specify' }
+        ];
+
+        checkboxGroups.forEach(group => {
+            const checkboxes = document.querySelectorAll(`input[name="${group.checkboxName}"][value="${group.otherCheckboxValue}"]`);
+            const otherSpecifyField = document.getElementById(group.otherSpecifyId);
+
+            checkboxes.forEach(checkbox => {
+                checkbox.addEventListener('change', function() {
+                    if (this.checked) {
+                        otherSpecifyField.style.display = 'inline-block';
+                        // Optionally make it required, though for checkboxes it might be less strict
+                        // otherSpecifyField.required = true; 
+                    } else {
+                        otherSpecifyField.style.display = 'none';
+                        // otherSpecifyField.required = false;
+                        otherSpecifyField.value = ''; // Clear value when hidden
+                    }
+                });
+                // Initial check
+                if (checkbox.checked) {
+                    otherSpecifyField.style.display = 'inline-block';
+                } else {
+                     // Only hide if it's not already visible due to another checkbox in a hypothetical multi-other scenario
+                    if(document.querySelectorAll(`input[name="${group.checkboxName}"][value="${group.otherCheckboxValue}"]:checked`).length === 0) {
+                        otherSpecifyField.style.display = 'none';
+                    }
+                }
+            });
+        });
+
+        // --- START: Script for Dynamic Question 14 ---
+        const q13Checkboxes = document.querySelectorAll(
+            'input[type="checkbox"][name="ai_tools_text_generation[]"], ' +
+            'input[type="checkbox"][name="ai_tools_image_generation[]"], ' +
+            'input[type="checkbox"][name="ai_tools_video_generation[]"], ' +
+            'input[type="checkbox"][name="ai_tools_audio_generation[]"], ' +
+            'input[type="checkbox"][name="ai_tools_data_analysis[]"], ' +
+            'input[type="checkbox"][name="ai_tools_coding[]"]'
+        );
+        const q13OtherTextInputs = [
+            document.getElementById('text_other_specify'),
+            document.getElementById('image_other_specify'),
+            document.getElementById('video_other_specify'),
+            document.getElementById('audio_other_specify'),
+            document.getElementById('data_other_specify'),
+            document.getElementById('coding_other_specify')
+        ].filter(input => input !== null);
+
+        const q14Container = document.getElementById('q14_dynamic_proficiencies');
+        const proficiencyLevels = [
+            { label: 'Not proficient', value: 'not_proficient' },
+            { label: 'Slightly proficient', value: 'slightly_proficient' },
+            { label: 'Moderately proficient', value: 'moderately_proficient' },
+            { label: 'Very proficient', value: 'very_proficient' },
+            { label: 'Expert', value: 'expert' }
+        ];
+
+        function slugify(text) {
+            if (!text) return '';
+            return text.toString().toLowerCase()
+                .replace(/\s+/g, '-')
+                .replace(/[^\w\-]+/g, '')
+                .replace(/\-\-+/g, '-')
+                .replace(/^-+/, '')
+                .replace(/-+$/, '');
+        }
+
+        function updateQuestion14() {
+            q14Container.innerHTML = ''; 
+            const selectedTools = new Set();
+
+            q13Checkboxes.forEach(checkbox => {
+                if (checkbox.checked) {
+                    if (!checkbox.value.startsWith('Other_')) {
+                        selectedTools.add(checkbox.value);
+                    }
+                }
+            });
+
+            q13OtherTextInputs.forEach(textInput => {
+                const toolName = textInput.value.trim();
+                if (toolName) { // Only proceed if there's text in the 'Other' specify field
+                    let correspondingOtherCheckbox = null;
+                    if (textInput.id === 'text_other_specify') {
+                        correspondingOtherCheckbox = document.getElementById('text_other_checkbox');
+                    }
+                    else if (textInput.id === 'image_other_specify') {
+                        correspondingOtherCheckbox = document.getElementById('image_other_checkbox');
+                    }
+                    else if (textInput.id === 'video_other_specify') {
+                        correspondingOtherCheckbox = document.getElementById('video_other_checkbox');
+                    }
+                    else if (textInput.id === 'audio_other_specify') {
+                        correspondingOtherCheckbox = document.getElementById('audio_other_checkbox');
+                    }
+                    else if (textInput.id === 'data_other_specify') {
+                        correspondingOtherCheckbox = document.getElementById('data_other_checkbox');
+                    }
+                    else if (textInput.id === 'coding_other_specify') {
+                        correspondingOtherCheckbox = document.getElementById('coding_other_checkbox');
+                    }
+                    
+                    // Check if the corresponding "Other" checkbox exists and is actually checked
+                    if (correspondingOtherCheckbox && correspondingOtherCheckbox.checked) {
+                         selectedTools.add(toolName); // Add the text from the input field
+                    }
+                }
+            });
+            
+            if (selectedTools.size === 0) {
+                q14Container.innerHTML = '<p><em>Please select tools in Question 13 to see proficiency options.</em></p>';
+                return;
+            }
+
+            selectedTools.forEach(toolName => {
+                const toolSlug = slugify(toolName);
+                if (!toolSlug) return; // Skip if tool name results in empty slug (e.g. just symbols)
+
+                const fieldset = document.createElement('fieldset');
+                const legend = document.createElement('legend');
+                legend.textContent = toolName;
+                fieldset.appendChild(legend);
+
+                proficiencyLevels.forEach(level => {
+                    const div = document.createElement('div');
+                    const radio = document.createElement('input');
+                    radio.type = 'radio';
+                    radio.name = `proficiency_${toolSlug}`;
+                    radio.id = `proficiency_${toolSlug}_${level.value}`;
+                    radio.value = level.value;
+                    radio.required = true; 
+
+                    const labelElement = document.createElement('label');
+                    labelElement.htmlFor = radio.id;
+                    labelElement.textContent = level.label;
+
+                    div.appendChild(radio);
+                    div.appendChild(labelElement);
+                    fieldset.appendChild(div);
+                });
+                q14Container.appendChild(fieldset);
+            });
+        }
+
+        q13Checkboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', updateQuestion14);
+        });
+        q13OtherTextInputs.forEach(input => {
+            input.addEventListener('input', updateQuestion14); 
+            
+            let otherCheckboxId = '';
+            if (input.id === 'text_other_specify') otherCheckboxId = 'text_other_checkbox';
+            else if (input.id === 'image_other_specify') otherCheckboxId = 'image_other_checkbox';
+            else if (input.id === 'video_other_specify') otherCheckboxId = 'video_other_checkbox';
+            else if (input.id === 'audio_other_specify') otherCheckboxId = 'audio_other_checkbox';
+            else if (input.id === 'data_other_specify') otherCheckboxId = 'data_other_checkbox';
+            else if (input.id === 'coding_other_specify') otherCheckboxId = 'coding_other_checkbox';
+            const otherCheckbox = document.getElementById(otherCheckboxId);
+            if (otherCheckbox) {
+                 otherCheckbox.addEventListener('change', updateQuestion14);
+            }
+        });
+
+        updateQuestion14();
+        // --- END: Script for Dynamic Question 14 ---
+    </script>
+</body>
+</html>
