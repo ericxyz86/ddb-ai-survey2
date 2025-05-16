@@ -178,19 +178,20 @@
                 <fieldset>
                     <legend>Image generation/editing</legend>
                     <div><input type="checkbox" id="image_midjourney" name="ai_tools_image_generation[]" value="Midjourney"><label for="image_midjourney">Midjourney</label></div>
+                    <div><input type="checkbox" id="image_chatgpt" name="ai_tools_image_generation[]" value="ChatGPT Image Gen"><label for="image_chatgpt">ChatGPT Image Gen</label></div>
+                    <div><input type="checkbox" id="image_flux" name="ai_tools_image_generation[]" value="Flux"><label for="image_flux">Flux</label></div>
+                    <div><input type="checkbox" id="image_ideogram" name="ai_tools_image_generation[]" value="Ideogram"><label for="image_ideogram">Ideogram</label></div>
                     <div><input type="checkbox" id="image_firefly" name="ai_tools_image_generation[]" value="Adobe Firefly"><label for="image_firefly">Adobe Firefly</label></div>
-                    <div><input type="checkbox" id="image_dalle" name="ai_tools_image_generation[]" value="DALL-E"><label for="image_dalle">DALL-E</label></div>
-                    <div><input type="checkbox" id="image_stable_diffusion" name="ai_tools_image_generation[]" value="Stable Diffusion"><label for="image_stable_diffusion">Stable Diffusion</label></div>
-                    <div><input type="checkbox" id="image_leonardo" name="ai_tools_image_generation[]" value="Leonardo.Ai"><label for="image_leonardo">Leonardo.Ai</label></div>
                     <div><input type="checkbox" id="image_other_checkbox" name="ai_tools_image_generation[]" value="Other_Image_Gen"><label for="image_other_checkbox">Other</label></div>
                     <input type="text" id="image_other_specify" name="ai_tools_image_generation_other" placeholder="Specify other image generation tools">
                 </fieldset>
                  <fieldset>
                     <legend>Video generation/editing</legend>
+                    <div><input type="checkbox" id="video_veo" name="ai_tools_video_generation[]" value="Veo"><label for="video_veo">Veo</label></div>
+                    <div><input type="checkbox" id="video_kling" name="ai_tools_video_generation[]" value="Kling AI"><label for="video_kling">Kling AI</label></div>
+                    <div><input type="checkbox" id="video_runway" name="ai_tools_video_generation[]" value="Runway"><label for="video_runway">Runway</label></div>
+                    <div><input type="checkbox" id="video_descript" name="ai_tools_video_generation[]" value="Descript"><label for="video_descript">Descript</label></div>
                     <div><input type="checkbox" id="video_sora" name="ai_tools_video_generation[]" value="Sora"><label for="video_sora">Sora</label></div>
-                    <div><input type="checkbox" id="video_runway" name="ai_tools_video_generation[]" value="RunwayML"><label for="video_runway">RunwayML</label></div>
-                    <div><input type="checkbox" id="video_synthesia" name="ai_tools_video_generation[]" value="Synthesia"><label for="video_synthesia">Synthesia</label></div>
-                    <div><input type="checkbox" id="video_invideo" name="ai_tools_video_generation[]" value="InVideo AI"><label for="video_invideo">InVideo AI</label></div>
                     <div><input type="checkbox" id="video_other_checkbox" name="ai_tools_video_generation[]" value="Other_Video_Gen"><label for="video_other_checkbox">Other</label></div>
                     <input type="text" id="video_other_specify" name="ai_tools_video_generation_other" placeholder="Specify other video generation tools">
                 </fieldset>
@@ -198,13 +199,15 @@
                     <legend>Audio generation/editing (e.g. voice cloning, music generation)</legend>
                     <div><input type="checkbox" id="audio_elevenlabs" name="ai_tools_audio_generation[]" value="ElevenLabs"><label for="audio_elevenlabs">ElevenLabs</label></div>
                     <div><input type="checkbox" id="audio_playht" name="ai_tools_audio_generation[]" value="PlayHT"><label for="audio_playht">PlayHT</label></div>
+                    <div><input type="checkbox" id="audio_udio" name="ai_tools_audio_generation[]" value="Udio AI"><label for="audio_udio">Udio AI</label></div>
                     <div><input type="checkbox" id="audio_suno" name="ai_tools_audio_generation[]" value="Suno AI"><label for="audio_suno">Suno AI</label></div>
                     <div><input type="checkbox" id="audio_other_checkbox" name="ai_tools_audio_generation[]" value="Other_Audio_Gen"><label for="audio_other_checkbox">Other</label></div>
                     <input type="text" id="audio_other_specify" name="ai_tools_audio_generation_other" placeholder="Specify other audio generation tools">
                 </fieldset>
                 <fieldset>
                     <legend>Data analysis/visualization</legend>
-                    <div><input type="checkbox" id="data_chatgpt_analysis" name="ai_tools_data_analysis[]" value="ChatGPT (Data Analysis)"><label for="data_chatgpt_analysis">ChatGPT (Data Analysis)</label></div>
+                    <div><input type="checkbox" id="data_chatgpt_analysis" name="ai_tools_data_analysis[]" value="ChatGPT Code Interpreter"><label for="data_chatgpt_analysis">ChatGPT Code Interpreter</label></div>
+                    <div><input type="checkbox" id="data_looker" name="ai_tools_data_analysis[]" value="Looker Studio"><label for="data_looker">Looker Studio</label></div>
                     <div><input type="checkbox" id="data_tableau" name="ai_tools_data_analysis[]" value="Tableau AI"><label for="data_tableau">Tableau AI</label></div>
                     <div><input type="checkbox" id="data_powerbi" name="ai_tools_data_analysis[]" value="PowerBI AI"><label for="data_powerbi">PowerBI AI</label></div>
                     <div><input type="checkbox" id="data_other_checkbox" name="ai_tools_data_analysis[]" value="Other_Data_Analysis"><label for="data_other_checkbox">Other</label></div>

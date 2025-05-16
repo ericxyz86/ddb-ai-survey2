@@ -105,30 +105,36 @@ Welcome to the DDB Group Philippines Generative AI Skills Gap & Agency Survey. I
       6. Others (please specify): __________
     - Image creation/editing
       1. Midjourney
-      2. Dalle-E
+      2. ChatGPT Image Gen
       3. Flux
       4. Ideogram
       5. Adobe Firefly
       6. Others (please specify): _________
     - Video production
-      1. Sora
-      2. Runway
-      3. Veo
-      4. Kling
-      5. Descript
+      1. Veo
+      2. Kling AI
+      3. Runway
+      4. Descript
+      5. Sora
       6. Others (please specify): __________
-    - Code/workflow automation
+    - Coding/automation
       1. Cursor
       2. Windsurf
       3. GitHub Copilot
       4. Zapier
       5. n8n
       6. Others (please specify): __________
+    - Audio generation/editing
+      1. ElevenLabs
+      2. PlayHT
+      3. Udio AI
+      4. Suno AI
+      5. Others (please specify): __________
     - Data analysis/visualization
-      1. LLM Code Interpreter
-      2. Google Looker
-      3. KNIME
-      4. Julius AI
+      1. ChatGPT Code Interpreter
+      2. Looker Studio
+      3. Tableau AI
+      4. PowerBI AI
       5. Others (please specify): _________
     - Others (please specify): __________
     - None of the above
