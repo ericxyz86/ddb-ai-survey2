@@ -541,13 +541,9 @@
 
         // --- START: Script for Dynamic Question 14 ---
         const q13Checkboxes = document.querySelectorAll(
-            'input[type="checkbox"][name="ai_tools_text_generation[]"], ' +
-            'input[type="checkbox"][name="ai_tools_image_generation[]"], ' +
-            'input[type="checkbox"][name="ai_tools_video_generation[]"], ' +
-            'input[type="checkbox"][name="ai_tools_audio_generation[]"], ' +
-            'input[type="checkbox"][name="ai_tools_data_analysis[]"], ' +
-            'input[type="checkbox"][name="ai_tools_coding[]"]'
+            'input[type="checkbox"][name^="ai_tools_"]:not([name$="_other"])'
         );
+        
         const q13OtherTextInputs = [
             document.getElementById('text_other_specify'),
             document.getElementById('image_other_specify'),
@@ -578,42 +574,27 @@
 
         function updateQuestion14() {
             q14Container.innerHTML = ''; 
-            const selectedTools = new Set();
+            const selectedTools = new Map();
 
+            // Process all checkboxes
             q13Checkboxes.forEach(checkbox => {
                 if (checkbox.checked) {
-                    if (!checkbox.value.startsWith('Other_')) {
-                        selectedTools.add(checkbox.value);
+                    const toolName = checkbox.value;
+                    if (!toolName.startsWith('Other_')) {
+                        const label = checkbox.nextElementSibling?.textContent || toolName;
+                        selectedTools.set(toolName, label);
                     }
                 }
             });
 
+            // Process 'Other' text inputs
             q13OtherTextInputs.forEach(textInput => {
                 const toolName = textInput.value.trim();
-                if (toolName) { // Only proceed if there's text in the 'Other' specify field
-                    let correspondingOtherCheckbox = null;
-                    if (textInput.id === 'text_other_specify') {
-                        correspondingOtherCheckbox = document.getElementById('text_other_checkbox');
-                    }
-                    else if (textInput.id === 'image_other_specify') {
-                        correspondingOtherCheckbox = document.getElementById('image_other_checkbox');
-                    }
-                    else if (textInput.id === 'video_other_specify') {
-                        correspondingOtherCheckbox = document.getElementById('video_other_checkbox');
-                    }
-                    else if (textInput.id === 'audio_other_specify') {
-                        correspondingOtherCheckbox = document.getElementById('audio_other_checkbox');
-                    }
-                    else if (textInput.id === 'data_other_specify') {
-                        correspondingOtherCheckbox = document.getElementById('data_other_checkbox');
-                    }
-                    else if (textInput.id === 'coding_other_specify') {
-                        correspondingOtherCheckbox = document.getElementById('coding_other_checkbox');
-                    }
-                    
-                    // Check if the corresponding "Other" checkbox exists and is actually checked
-                    if (correspondingOtherCheckbox && correspondingOtherCheckbox.checked) {
-                         selectedTools.add(toolName); // Add the text from the input field
+                if (toolName) {
+                    // Find the corresponding 'Other' checkbox
+                    const otherCheckbox = textInput.previousElementSibling?.querySelector('input[type="checkbox"]');
+                    if (otherCheckbox && otherCheckbox.checked) {
+                        selectedTools.set(`other_${textInput.id}`, toolName);
                     }
                 }
             });
@@ -623,32 +604,40 @@
                 return;
             }
 
-            selectedTools.forEach(toolName => {
-                const toolSlug = slugify(toolName);
-                if (!toolSlug) return; // Skip if tool name results in empty slug (e.g. just symbols)
+            // Create proficiency options for each selected tool
+            selectedTools.forEach((displayName, toolId) => {
+                const toolSlug = slugify(toolId);
+                if (!toolSlug) return;
 
                 const fieldset = document.createElement('fieldset');
+                fieldset.className = 'proficiency-fieldset';
+                
                 const legend = document.createElement('legend');
-                legend.textContent = toolName;
+                legend.textContent = displayName;
                 fieldset.appendChild(legend);
 
                 proficiencyLevels.forEach(level => {
                     const div = document.createElement('div');
+                    const radioId = `proficiency_${toolSlug}_${level.value}`;
+                    
                     const radio = document.createElement('input');
                     radio.type = 'radio';
                     radio.name = `proficiency_${toolSlug}`;
-                    radio.id = `proficiency_${toolSlug}_${level.value}`;
+                    radio.id = radioId;
                     radio.value = level.value;
-                    radio.required = true; 
+                    radio.required = true;
+                    radio.className = 'proficiency-radio';
 
                     const labelElement = document.createElement('label');
-                    labelElement.htmlFor = radio.id;
+                    labelElement.htmlFor = radioId;
                     labelElement.textContent = level.label;
+                    labelElement.className = 'proficiency-label';
 
                     div.appendChild(radio);
                     div.appendChild(labelElement);
                     fieldset.appendChild(div);
                 });
+                
                 q14Container.appendChild(fieldset);
             });
         }

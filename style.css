@@ -144,6 +144,36 @@ em {
     display: none;
 }
 
+/* Proficiency options styling */
+.proficiency-fieldset {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+}
+
+.proficiency-fieldset legend {
+    font-weight: bold;
+    padding: 0 10px;
+    color: #333;
+}
+
+.proficiency-fieldset div {
+    margin: 8px 0;
+    display: flex;
+    align-items: center;
+}
+
+.proficiency-radio {
+    margin-right: 10px;
+}
+
+.proficiency-label {
+    cursor: pointer;
+    font-weight: normal;
+}
+
 /* Responsive adjustments */
 @media (max-width: 600px) {
     .container {
